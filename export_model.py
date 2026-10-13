@@ -7,7 +7,7 @@ from ultralytics import YOLO
 MODEL = "yolo11n-seg"  # daha dogru ama yavas: yolo11s-seg
 
 model = YOLO(f"{MODEL}.pt")
-out = model.export(format="coreml", imgsz=640, half=True)
+out = model.export(format="coreml", imgsz=640)
 
 dest = Path("Models") / f"{MODEL}.mlpackage"
 dest.parent.mkdir(exist_ok=True)
